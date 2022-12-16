@@ -3,7 +3,15 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      message: "Hello Vue!",
+      message1: "Hello Vue!",
     };
   },
-}).mount("#app");
+}).mount("#app1");
+
+createApp({
+  data() {
+    return {
+      message2: "Hello Vue again!",
+    };
+  },
+}).mount("#app2");
