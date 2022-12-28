@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      question: true,
+      items: [{ fluit: "りんご" }, { fluit: "バナナ" }, { fluit: "みかん" }],
     };
   },
 }).mount("#app");
