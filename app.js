@@ -10,4 +10,10 @@ createApp({
       return count;
     },
   },
+  methods: {
+    countStringMethod: function () {
+      const count = this.message.length;
+      return count;
+    },
+  },
 }).mount("#app");
