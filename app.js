@@ -1,9 +1,11 @@
+const MessageItem = {
+  template: "<h1>Hello!</h1>",
+};
+
 const { createApp } = Vue;
 
 createApp({
-  data() {
-    return {
-      message: "Hello Vue again!",
-    };
+  components: {
+    MessageItem,
   },
 }).mount("#app");
