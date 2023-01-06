@@ -2,18 +2,19 @@ const { createApp } = Vue;
 
 createApp({
   data: () => ({
-    message: "Hello",
+    lastName: "",
+    firstName: "",
   }),
   computed: {
-    countString: function () {
-      const count = this.message.length;
-      return count;
-    },
-  },
-  methods: {
-    countStringMethod: function () {
-      const count = this.message.length;
-      return count;
+    fullName: {
+      get() {
+        return this.lastName + " " + this.firstName;
+      },
+      set(newValue) {
+        const name = newValue.split(" ");
+        this.lastName = name[0];
+        this.firstName = name[1];
+      },
     },
   },
 }).mount("#app");
