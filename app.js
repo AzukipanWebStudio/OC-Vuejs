@@ -1,11 +1,13 @@
-const MessageItem = {
-  template: "<h1>Hello!</h1>",
-};
-
 const { createApp } = Vue;
 
 createApp({
-  components: {
-    MessageItem,
+  data: () => ({
+    message: "Hello",
+  }),
+  computed: {
+    countString: function () {
+      const count = this.message.length;
+      return count;
+    },
   },
 }).mount("#app");
