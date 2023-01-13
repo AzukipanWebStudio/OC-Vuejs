@@ -8,8 +8,11 @@
   </head>
   <body>
     <div id="app">
-      <div><input type="text" v-model="km" />km</div>
-      <p>{{ m }}m</p>
+      <div>
+        <input type="text" v-model="lastName" />
+        <input type="text" v-model="firstName" />
+      </div>
+      <p>{{ fullName }}</p>
     </div>
 
     <script src="https://unpkg.com/vue@3.2.45/dist/vue.global.js"></script>

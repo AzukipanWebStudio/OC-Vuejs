@@ -2,13 +2,21 @@ const { createApp } = Vue;
 
 createApp({
   data: () => ({
-    m: 0,
-    km: 0,
+    lastName: "",
+    firstName: "",
+    // fullName: "",
   }),
-  watch: {
-    km(newValue, oldValue) {
-      console.log(newValue, oldValue);
-      this.m = newValue * 1000;
+  // watch: {
+  //   lastName(value) {
+  //     this.fullName = value + " " + this.firstName;
+  //   },
+  //   firstName(value) {
+  //     this.fullName = this.lastName + " " + value;
+  //   },
+  // },
+  computed: {
+    fullName: function () {
+      return (this.fullName = this.lastName + " " + this.firstName);
     },
   },
 }).mount("#app");
