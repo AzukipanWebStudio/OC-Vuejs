@@ -1,3 +1,7 @@
 .active {
   color: blue;
 }
+
+.font-large {
+  font-size: 72px;
+}
