@@ -2,6 +2,6 @@ const { createApp } = Vue;
 
 createApp({
   data: () => ({
-    number: 1,
+    number: 2,
   }),
 }).mount("#app");
