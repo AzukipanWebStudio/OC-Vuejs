@@ -2,6 +2,10 @@
   color: blue;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .font-large {
   font-size: 72px;
 }

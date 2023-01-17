@@ -2,6 +2,7 @@ const { createApp } = Vue;
 
 createApp({
   data: () => ({
-    isActive: true,
+    activeClass: "active",
+    textUnderline: "text-underline",
   }),
 }).mount("#app");
