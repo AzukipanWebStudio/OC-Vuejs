@@ -2,6 +2,10 @@
   color: blue;
 }
 
+.error {
+  color: red;
+}
+
 .text-underline {
   text-decoration: underline;
 }
