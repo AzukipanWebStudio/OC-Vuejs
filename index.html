@@ -8,9 +8,11 @@
   </head>
   <body>
     <div id="app">
-      <p v-if="number === 1">one</p>
-      <p v-else-if="number === 2">two</p>
-      <p v-else>not found</p>
+      <ul>
+        <li v-for="(value, name, index) in confirmation">
+          {{ index }} {{ name }} : {{ value }}
+        </li>
+      </ul>
     </div>
 
     <script src="https://unpkg.com/vue@3.2.45"></script>
