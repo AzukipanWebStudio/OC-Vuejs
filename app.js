@@ -2,10 +2,6 @@ const { createApp } = Vue;
 
 createApp({
   data: () => ({
-    confirmation: {
-      firstName: "Ichiro",
-      lastName: "Tanaka",
-      email: "test@example.com",
-    },
+    counter: 0,
   }),
 }).mount("#app");

@@ -8,11 +8,8 @@
   </head>
   <body>
     <div id="app">
-      <ul>
-        <li v-for="(value, name, index) in confirmation">
-          {{ index }} {{ name }} : {{ value }}
-        </li>
-      </ul>
+      <p>{{ counter }}</p>
+      <button v-on:click="counter += 1">+</button>
     </div>
 
     <script src="https://unpkg.com/vue@3.2.45"></script>
