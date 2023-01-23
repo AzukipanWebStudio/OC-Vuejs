@@ -1,10 +1,20 @@
 const MessageItem = {
-  template: "<h1>Hello!</h1>",
+  props: ["message"],
+  template: "<h1>{{ message }}</h1>",
 };
 
 const { createApp } = Vue;
 
 createApp({
+  data: function () {
+    return {
+      items: [
+        { id: 1, comment: "Hello Message" },
+        { id: 2, comment: "Group Message" },
+        { id: 3, comment: "Hello Vue" },
+      ],
+    };
+  },
   components: {
     MessageItem,
   },
