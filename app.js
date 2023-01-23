@@ -6,15 +6,14 @@ const MessageItem = {
 const { createApp } = Vue;
 
 createApp({
-  data: function () {
-    return {
-      items: [
-        { id: 1, comment: "Hello Message" },
-        { id: 2, comment: "Group Message" },
-        { id: 3, comment: "Hello Vue" },
-      ],
-    };
-  },
+  data: () => ({
+    items: [
+      { id: 1, comment: "Hello Message" },
+      { id: 2, comment: "Group Message" },
+      { id: 3, comment: "Hello Vue" },
+    ],
+  }),
+
   components: {
     MessageItem,
   },
