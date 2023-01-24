@@ -1,20 +1,30 @@
-const MessageItem = {
-  props: ["message"],
-  template: "<h1>{{ message }}</h1>",
+const HomeComponent = {
+  template: `<div class="demo-tab">Home component</div>`,
+};
+
+const AboutComponent = {
+  template: `<div class="demo-tab">About component</div>`,
+};
+
+const ContactComponent = {
+  template: `<div class="demo-tab">Contact component</div>`,
 };
 
 const { createApp } = Vue;
 
 createApp({
   data: () => ({
-    items: [
-      { id: 1, comment: "Hello Message" },
-      { id: 2, comment: "Group Message" },
-      { id: 3, comment: "Hello Vue" },
-    ],
+    tabs: ["Home", "About", "Contact"],
+    currentTab: "Home",
   }),
-
+  computed: {
+    currentTabComponent() {
+      return "tab-" + this.currentTab.toLowerCase();
+    },
+  },
   components: {
-    MessageItem,
+    "tab-home": HomeComponent,
+    "tab-about": AboutComponent,
+    "tab-contact": ContactComponent,
   },
 }).mount("#app");
